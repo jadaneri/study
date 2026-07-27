@@ -1,0 +1,82 @@
+[
+    {
+        "question": "what's the criteria for a function f to be continuous at C?",
+        "answer": "1. f must be defined at C\n 2. the limit must exist at C\n 3. #1 and #2 must be the same"
+    },
+
+    {
+        "question": "any number over infinity is equal to ___",
+        "answer": "0"
+    },
+
+    { 
+        "question": "1/0 is equal to ____",
+        "answer": "infinity"
+    },
+
+    {
+        "question": "the derivative of sinx",
+        "answer": "cosx"
+    }, 
+
+    {
+        "question": "the derivative of cosx",
+        "answer": "-sinx"
+    },
+
+    {
+        "question": "the derivative of tanx",
+        "answer": "sec²x"
+    }, 
+
+    {
+        "question": "the derivative of cscx",
+        "answer": "-cscxcotx"
+    },
+
+    {
+        "question": "the derivative of secx",
+        "answer": "secxtanx"
+    },
+    
+    {
+        "question": "the derivative of cotx",
+        "answer": "-csc²x"
+    }, 
+
+    {
+        "question" : "lim (x->0) sinx = ",
+        "answer" : "0"
+    },
+
+    {
+        "question" : "lim (x->0) cosx = ",
+        "answer": "1"
+    },
+
+    {
+        "question": "lim (x->0) tanx =",
+        "answer": "0"
+    },
+
+    {
+        "question": "lim (x->0) sinx / x =",
+        "answer": "1"
+    }, 
+
+    {
+        "question": "dy/dx [ ln(x) ] =",
+        "answer": "1/x"
+    },
+
+    {
+        "question": "dy/dx [ sin⁻¹x ] = ",
+        "answer": "1 / (√1 - x²)"
+    },
+
+    {
+        "question": "dy/dx [ tan⁻¹x ] = ",
+        "answer": "1 / (1 + x²) "
+    }
+
+]
