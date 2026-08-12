@@ -1,7 +1,9 @@
 [
     {
         "question": "what's the criteria for a function f to be continuous at C?",
-        "answer": "1. f must be defined at C\n 2. the limit must exist at C\n 3. #1 and #2 must be the same"
+        "answer": "1. f must be defined at C\n 2. the limit must exist at C\n 3. #1 and #2 must be the same",
+        "interval" : 0,
+        "nextReviewDay": 0
     },
 
     {
@@ -77,6 +79,59 @@
     {
         "question": "dy/dx [ tan⁻¹x ] = ",
         "answer": "1 / (1 + x²) "
-    }
+    },
 
-]
+    {
+        "question": "log (A * B) is equivalent to...",
+        "answer": "log(A) + log(B)"
+    },
+    {
+        "question": "log (A / B) is equivalent to... ",
+        "answer": "log(A) - log(B)"
+    },
+
+    {
+        "question": "log(x)ᴾ is equivalent to... (power rule)",
+        "answer": "P * log(x)",
+        "interval": 0,
+        "nextReviewDay": 0
+    },
+
+    {
+        "question": "logₐx is equivalent to... (change of base rule)",
+        "answer": "logₛx / logₛa",
+        "interval": 0,
+        "nextReviewDay": 0
+    },
+    {
+        "question": "if logₛx = logₛy then... (equality rule)",
+        "answer": "x = y",
+        "interval":0,
+        "nextReviewDay": 0
+    },
+    {
+        "question": "dy/dx[ logₐx ] = ",
+        "answer": "1 / x ln(a)",
+        "interval": 0,
+        "nextReviewDay": 0
+    },
+    {
+        "question": "d/dx[ aˣ ] = ",
+        "answer": "aˣln(a)",
+        "interval": 0,
+        "nextReviewDay": 0
+    },
+    {
+        "question": "x⁻ᵃ is equivalent to",
+        "answer": "1 / xᵃ",
+        "interval": 0,
+        "nextReviewDay": 0
+    },
+    {
+        "question": "xᵐ/ⁿ is equivalent to",
+        "answer": "ⁿ√(xᵐ) or (ⁿ√x)ᵐ",
+        "interval": 0,
+        "nextReviewDay": 0
+    }
+    
+] 

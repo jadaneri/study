@@ -13,6 +13,9 @@ main.cpp will:
 #include <fstream> 
 #include <string>
 #include <nlohmann/json.hpp> // so we can parse through json
+#include <vector> 
+#include <random>
+#include "Card.h"
 using json = nlohmann::json; // so we don't have to write the full thing out everytime
 
 
@@ -38,65 +41,55 @@ int main (){
     // create json object
     json cards; 
     file >> cards;
-
-    // std::cout << "loaded " << cards.size() << " cards!" << std::endl; 
-
-    /*
-
-    // attempt to print the first card!
-    std::cout << cards[0]["question"] << std:: endl;
-    std::cout << cards[0]["answer"] << std::endl;
-
-    // loop through all the cards!
-    for (int i = 0; i < cards.size(); i++){
-        std::cout << cards[i]["question"] << std::endl;
-        std::cout << cards[i]["answer"] << std::endl; 
-    }
-
-    */
-
-    // ok now we are going to attempt to print a question, wait for user input, then display the answer!
-    // outer loop to get through all the cards
+    
     std::string enter;
     std::string answer;
     std::string question;
-    //enter = "";
+    int num = 1; 
+    
+   
+    // okay this is going to put the cards into a vector
+    std::vector<Card> flashCards;
 
+    // generate random stuff so we can shuffle 
+    std::random_device rd; 
+    std::mt19937 g(rd());
+
+    // PUTTING OUR CARDS IN THE VECTOR!
     for (int i = 0; i < cards.size(); i++){
+        //read one json object, create one card, put into our flashcards vector. 
         question = cards[i]["question"];
-        std::cout << "Card " << i + 1 << "/" << cards.size() << std::endl;
-        std::cout << question << std::endl;
-        //std::cout << cards[i]["question"] << std::endl;
-        
         answer = cards[i]["answer"];
-       
-        getline(std::cin, enter); 
+        flashCards.push_back(Card(question, answer)); 
+    } 
+    // shuffle the cards in our vector 
+    std::shuffle(flashCards.begin(), flashCards.end(), g);
+    
+
+    // reading our cards!!!
+    for (const Card& card : flashCards){
+        
+        std::cout << "card " << num++ << "/" << flashCards.size() <<  std::endl;
+        std::cout << card.question << std::endl; 
+        getline(std::cin, enter);
 
         if (enter == ""){
-            std::cout << answer << std::endl;
-            //std::cout << cards[i]["answer"] << std::endl;
+            std::cout << card.answer << std::endl;
         }
         else if (enter == "q"){
             break;
         }
-        std::cout << std::endl;
-        std::cout << std::endl; 
 
-        getline(std::cin, enter); 
+        // give opportunity to quit
+        getline(std::cin, enter);
 
         if (enter == ""){
             std::cout << std::endl;
-            //std::cout << cards[i]["answer"] << std::endl;
         }
         else if (enter == "q"){
             break;
         }
-
     }
-
-    std::cout << "Congratulations! You have studied all your cards!" << std::endl;
-    
-
-    //freak i don't really remember how to get input
-
+   
+   
 }
